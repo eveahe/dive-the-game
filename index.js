@@ -118,11 +118,14 @@ const loadDisk = (disk, config = {}) => {
             if (!disk.inventory.length) {
               println('You don\'t have any items in your inventory.')
               return;
-            }
-            println('You have the following items in your inventory:');
-            disk.inventory.forEach(item => {
-              println(`* ${item.name}`);
-            });
+            } else {
+              println('You have the following items in your inventory:');
+              disk.inventory.forEach(item => {
+                println(`* ${item.name}`);
+              })
+              if(disk.numPhotos.length){
+                println(`* ${disk.numPhotos.length} photo(s)`);
+              }}                     
           },
           look() {
             println(room.desc);
@@ -136,6 +139,20 @@ const loadDisk = (disk, config = {}) => {
             println('Where would you like to go? Available directions are:');
             exits.forEach(exit => println(exit.dir));
           },
+          surface(){
+            println('You have completed your dive. To show for it you have:');
+            if (disk.inventory.length){
+                disk.inventory.forEach(item => {
+                println(`* ${item.name}`);
+              })
+              if(disk.numPhotos.length){
+                println(`* ${disk.numPhotos.length} photo(s)`);
+            }}
+            println('The truly know the sea is impossible and you remain in the dark, but these are a start.');
+            setTimeout(function(){
+                document.getElementById('output').innerHTML = "To dive again type Go Dive.";
+            }, 6000);
+          },
           help() {
             const instructions = `
               The following commands are available:
@@ -146,6 +163,7 @@ const loadDisk = (disk, config = {}) => {
               USE [OBJECT NAME] e.g. 'use door'
               INV :: list inventory items
               HELP :: this help menu
+              SURFACE return to the surface and end your dive
             `;
             println(instructions);
           },
@@ -165,7 +183,7 @@ const loadDisk = (disk, config = {}) => {
             }
             const nextRoom = exits.find(exit => exit.dir === args[1]);
             if (!nextRoom) {
-              println('There is no exit in that direction.');
+              println('You dare not go any further. That would be beyond the scope of your expedition.');
             } else {
               enterRoom(nextRoom.id);
             }
