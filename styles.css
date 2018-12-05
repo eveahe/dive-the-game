@@ -1,0 +1,43 @@
+@font-face{
+  font-family: "Apple II";
+  src: url('font.ttf');
+}
+
+body {
+  color: white;
+  background: #3385ff;
+  font-size: 2vh;
+  font-family: "Apple II";
+  line-height: 4vh;
+}
+
+.img {
+  white-space: pre;
+  display: inline-block;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#output {
+  width: 95vw;
+  height: 80vh;
+  margin-bottom: 2vw;
+  overflow-y: scroll;
+  padding: 2vw;
+}
+
+#output div {
+  margin-bottom: 1vw;
+}
+
+#input {
+  width: 98.5vw;
+  height: 10vh;
+  color:  white;
+  background: #3385ff;
+  position: fixed;
+  bottom: 0;
+  font-size: 2vh;
+  font-family: "Apple II";
+}
