@@ -2,7 +2,16 @@
 ![Demo Screenshot](https://cdn.glitch.com/1bfa9f3a-3a61-4172-afe0-6ba07c2f7c67%2FScreen%20Shot%202018-12-05%20at%209.57.44%20PM.png?1544045041602 "Demo Screenshot")
 
 ## The Game
-Explore the unknown depths of the deep ocean and the creatures that lurk there.
+Explore the unknown depths of the deep ocean and the creatures that lurk there. The game was a collaboration between Robert Norman + Eve Ahearn, confronting eve's fear of the deep ocean. 
+
+## !!!Spoilers for those who want to see how it works!!!
+![Game Map](https://cdn.glitch.com/1bfa9f3a-3a61-4172-afe0-6ba07c2f7c67%2Fgame_map.JPG?1544565088938)
+
+The game is made of nine rooms, traversable through cardinal directions. At the beginning of the game you are given two objects, a net and a camera. You can use each to interact with what you find in deep ocean, though they might not always work as expected. 
+
+The purpose of the game is open-ended and when your discovery is complete is up to you the player to define.
+
+You can exit the game voluntarily at any point through through the command "Surface."
 
 #### What is it?
 A JavaScript REPL-style text-based adventure game engine, based on the [text-engine](https://github.com/okaybenji/text-engine) library, available on [npm](https://www.npmjs.com/package/text-engine) too -- see [text-engine-node](https://github.com/okaybenji/text-engine-node) for further info.
