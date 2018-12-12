@@ -17,7 +17,6 @@ const loadDisk = (disk, config = {}) => {
       }
 
       output.appendChild(newLine).innerText = str;
-      // TODO: why doesn't this scroll to bottom on initial load?
       output.scrollTop = output.scrollHeight;
     },
     // prepare the environment
@@ -75,7 +74,7 @@ const loadDisk = (disk, config = {}) => {
     if (room.visits === 0) {
       println(room.desc);
     }
-
+    //Tracking visits to the room.
     room.visits++;
 
     disk.roomId = id;
@@ -139,6 +138,7 @@ const loadDisk = (disk, config = {}) => {
             println('Where would you like to go? Available directions are:');
             exits.forEach(exit => println(exit.dir));
           },
+          //Added this command, ending the game through surfacing.
           surface(){
             println('You have completed your dive. To show for it you have:');
             if (disk.inventory.length){
