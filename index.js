@@ -153,6 +153,7 @@ const loadDisk = (disk, config = {}) => {
                 document.getElementById('output').innerHTML = "To dive again type Go Dive.";
             }, 6000);
           },
+          // For dive the game I added the instruction word for "surface." You can add any instructions you want, you just need to add it also to const cmds list that follows and define what that command does.
           help() {
             const instructions = `
               The following commands are available:
@@ -170,6 +171,7 @@ const loadDisk = (disk, config = {}) => {
         };
         exec(cmds[cmd]);
       },
+      //This is the list of commands that take two words as an argument.
       2() {
         const cmds = {
           look() {
@@ -222,6 +224,7 @@ const loadDisk = (disk, config = {}) => {
         };
         exec(cmds[cmd]);
       },
+       //This is the list of commands that take two words as an argument.
       3() {
         const cmds = {
           look() {
